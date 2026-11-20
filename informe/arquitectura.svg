@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+  <rect width="920" height="420" fill="#f7f4ef"/>
+  <text x="460" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1f2a24">Soporte RAG de NexoStock</text>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#1f2a24">
+    <rect x="40" y="70" width="180" height="64" rx="8" fill="#fff" stroke="#1f2a24"/>
+    <text x="130" y="107" text-anchor="middle">Usuario del negocio</text>
+    <rect x="280" y="70" width="180" height="64" rx="8" fill="#fff" stroke="#1f2a24"/>
+    <text x="370" y="98" text-anchor="middle">Open WebUI</text>
+    <text x="370" y="118" text-anchor="middle">puerto 8080</text>
+    <rect x="520" y="70" width="200" height="64" rx="8" fill="#fff" stroke="#1f2a24"/>
+    <text x="620" y="107" text-anchor="middle">qwen2.5:7b-instruct</text>
+    <rect x="280" y="210" width="220" height="88" rx="8" fill="#fff" stroke="#1f2a24"/>
+    <text x="390" y="242" text-anchor="middle">Colección NexoStock</text>
+    <text x="390" y="262" text-anchor="middle">corte 500 / solape 50</text>
+    <text x="390" y="282" text-anchor="middle">top 4 fragmentos</text>
+    <rect x="560" y="220" width="280" height="70" rx="8" fill="#fff" stroke="#1f2a24"/>
+    <text x="700" y="260" text-anchor="middle">6 documentos de conocimiento</text>
+    <rect x="40" y="320" width="400" height="64" rx="8" fill="#fff" stroke="#1f2a24"/>
+    <text x="240" y="357" text-anchor="middle">evaluate_rag.py · 50 casos · meta 70%</text>
+  </g>
+  <g stroke="#1f2a24" stroke-width="1.5" fill="none">
+    <line x1="220" y1="102" x2="280" y2="102"/>
+    <line x1="460" y1="102" x2="520" y2="102"/>
+    <line x1="370" y1="134" x2="370" y2="210"/>
+    <line x1="500" y1="254" x2="560" y2="254"/>
+    <line x1="240" y1="320" x2="370" y2="134"/>
+  </g>
+</svg>
