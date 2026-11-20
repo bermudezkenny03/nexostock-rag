@@ -1,0 +1,31 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama-nexostock
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:v0.5.20
+    container_name: open-webui-nexostock
+    ports:
+      # 8080 en el host para no chocar con el API Gateway de NexoStock (puerto 3000).
+      - "8080:8080"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama-nexostock:11434
+      - WEBUI_AUTH=true
+      - CHUNK_SIZE=500
+      - CHUNK_OVERLAP=50
+      - RAG_TOP_K=4
+    volumes:
+      - open-webui_data:/app/backend/data
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
+  open-webui_data:
